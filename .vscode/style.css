@@ -8,10 +8,13 @@
 
 body {
   background: var(--bg-url-) no-repeat top center / cover;
+  height: 100vh;
 }
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -19,7 +22,6 @@ body * {
   color: var(--text-color-);
 }
 #profile {
-  width: 360px;
   padding: 24px;
   text-align: center;
 }
@@ -158,4 +160,15 @@ ul li a:hover {
 .light #switch button {
   left: initial;
   right: 0;
+}
+
+/* media querie desktop*/
+@media (min-width: 680px) {
+  :root {
+    --bg-url-: url(./assets/bg-desktop.jpg);
+  }
+
+  .light{
+        --bg-url-: url(./assets/bg-desktop-light.jpg);
+  }
 }
