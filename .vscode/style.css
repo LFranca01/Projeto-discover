@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo/conteúdo */
+
+body {
+  background: var(--bg-url-) no-repeat top center / cover;
+}
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--text-color-);
+}
+#profile {
+  width: 360px;
+  padding: 24px;
+  text-align: center;
+}
+#profile img {
+  width: 112px;
+  display: block;
+  margin: auto;
+}
+#profile p {
+  margin-top: 8px;
+  line-height: 24px;
+  display: inline;
+}
+footer {
+  text-align: center;
+  height: 14px;
+  padding: 24px;
+}
+
+/*Switch*/
+#switch {
+  width: 64px;
+  margin: 4px auto;
+  position: relative;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+
+  background: var(--toogle-hand-) no-repeat center;
+  background-color: white;
+
+  border: none;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--stroke-color-);
+  background-color: var(--surface-color-);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Botões*/
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 24px;
+
+  border: 1px solid var(--stroke-color-);
+  background: var(--surface-color-);
+  border-radius: 8px;
+  text-decoration: none;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  transition: background 0.4s;
+}
+
+ul li a:hover {
+  border: 1.5px solid var(--stroke-color-hover-);
+  background: var(--surface-color-hover-);
+}
+
+/*redes sociais*/
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  transition: background 0.4s;
+  padding: 16px;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color-);
+}
+
+/* modo light*/
+:root {
+  --text-color-: white;
+  --stroke-color-: rgba(255, 255, 255, 0.5);
+  --surface-color-: rgba(255, 255, 255, 0.1);
+  --stroke-color-hover-: white;
+  --surface-color-hover-: rgba(255, 255, 255, 0.5);
+  --bg-url-: url(./assets/bg-mobile.jpg);
+  --highlight-color-: rgba(255, 255, 255, 0.2);
+  --toogle-hand-: url(./assets/MoonStars.svg);
+}
+
+.light {
+  --text-color-: black;
+  --stroke-color-: rgba(0, 0, 0, 0.5);
+  --surface-color-: rgba(0, 0, 0, 0.1);
+  --stroke-color-hover-: black;
+  --surface-color-hover-: rgba(0, 0, 0, 0.2);
+  --bg-url-: url(./assets/bg-mobile-light.jpg);
+  --highlight-color-: rgba(0, 0, 0, 0.1);
+  --toogle-hand-: url(./assets/Sun.svg);
+}
+
+.light #switch button {
+  left: initial;
+  right: 0;
+}
